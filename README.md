@@ -1,70 +1,46 @@
-# 🚦 Simple RTL Traffic Light Controller (Basic Mission 1)
+# 🚦 Basic 2 – Optimized Single Traffic Light Module
 
 ## 📌 Overview
 
-This project implements a basic traffic light controller using Verilog RTL.
-The purpose of this mission is to practice fundamental RTL design concepts, FSM implementation, and hardware-oriented coding rules.
+This project focuses on optimizing a single traffic light module designed for future expansion to a 4-way intersection.
 
-The design is structured to be expandable for a 4-way intersection system in the next mission.
-
----
-
-## ⚙️ System Specification
-
-* **Start Condition**: Controller operates when the `Start` button is pressed
-* **System Clock**: 100 MHz
-* **Design Method**: Finite State Machine (FSM)
-* **Timing Control**: Cycle-based counter
+The goal is to design a reusable and scalable module structure while maintaining clean RTL architecture.
 
 ---
 
-## 🚗 Vehicle Traffic Signals (4 Outputs)
+## 🎯 Mission Objective
 
-* 🔴 Red
-* 🟡 Yellow
-* ⬅️ Left Turn
-* 🟢 Green
-
-### Vehicle Timing Sequence
-
-| State     | Duration (Cycles)                  |
-| --------- | ---------------------------------- |
-| Green     | 20                                 |
-| Yellow    | 2                                  |
-| Left Turn | 10                                 |
-| Yellow    | 2                                  |
-| Red       | Designed to complete full sequence |
+* Design a **single traffic light module**
+* Ensure the design can be expanded into a **4-way intersection**
+* Improve modularity and scalability compared to Basic Mission 1
 
 ---
 
-## 🚶 Pedestrian Signals (2 Outputs)
+## 🏗 Design Rules
 
-* 🔴 Red
-* 🟢 Green
-
-### Pedestrian Behavior
-
-* Pedestrian green signal blinks for **6 cycles**
-* After blinking, it changes to **Red**
+* The intersection must be implemented by **instantiating four identical traffic light modules**
+* The **Top module must NOT include an additional control module**
+* A **single module must NOT directly control the entire intersection**
+* Each module should operate independently while supporting system-level expansion
 
 ---
 
-## 🛠 Design Features
+## 🛠 Design Concept
 
-* RTL-based synchronous design
-* FSM-driven state transitions
-* Parameterized cycle control
-* Modular structure for future multi-instance expansion
+* Fully modular RTL structure
+* FSM-based traffic signal control
+* Designed for clean instantiation and scalable hierarchy
+* No centralized global controller in the Top level
 
 ---
 
 ## 🎯 Purpose of This Mission
 
-* Understand traffic light controller architecture
-* Practice RTL coding standards
-* Learn FSM-based hardware design
-* Prepare for 4-way intersection implementation in Mission 2
+* Practice hierarchical RTL design
+* Improve module reusability
+* Understand scalable hardware architecture
+* Prepare for full 4-way intersection implementation
 
 ---
 
-This project focuses on mastering RTL fundamentals before extending the design into a complete intersection traffic controller.
+This mission emphasizes designing a clean and expandable single traffic light module suitable for multi-instance system integration.
