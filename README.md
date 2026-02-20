@@ -1,4 +1,4 @@
-# 🚦 Simple RTL Traffic Light Controller (Basic Mission 1)
+# 🚦 Basic 1 - Simple RTL Traffic Light Controller
 
 ## 📌 Overview
 
@@ -68,3 +68,4 @@ The design is structured to be expandable for a 4-way intersection system in the
 ---
 
 This project focuses on mastering RTL fundamentals before extending the design into a complete intersection traffic controller.
+
