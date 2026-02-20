@@ -1,18 +1,19 @@
-# 🚦 Basic 2 – Optimized Single Traffic Light Module
+# 🚦 Basic 3 – 4-Way Intersection Traffic Light Controller
 
 ## 📌 Overview
 
-This project focuses on optimizing a single traffic light module designed for future expansion to a 4-way intersection.
+This project extends the single traffic light module into a complete 4-way intersection system.
 
-The goal is to design a reusable and scalable module structure while maintaining clean RTL architecture.
+The design is implemented by instantiating four identical traffic light modules and verifying all intersection cases through a comprehensive testbench.
 
 ---
 
 ## 🎯 Mission Objective
 
-* Design a **single traffic light module**
-* Ensure the design can be expanded into a **4-way intersection**
-* Improve modularity and scalability compared to Basic Mission 1
+* Expand the single traffic light module to a **4-way intersection**
+* Implement the system using **four module instantiations**
+* Develop a **testbench covering all intersection cases**
+* Prepare a clear verbal explanation of the design architecture and operation
 
 ---
 
@@ -21,26 +22,39 @@ The goal is to design a reusable and scalable module structure while maintaining
 * The intersection must be implemented by **instantiating four identical traffic light modules**
 * The **Top module must NOT include an additional control module**
 * A **single module must NOT directly control the entire intersection**
-* Each module should operate independently while supporting system-level expansion
+* Each traffic light module must operate independently while supporting coordinated intersection behavior
 
 ---
 
 ## 🛠 Design Concept
 
-* Fully modular RTL structure
-* FSM-based traffic signal control
-* Designed for clean instantiation and scalable hierarchy
-* No centralized global controller in the Top level
+* Hierarchical RTL design
+* FSM-based traffic light control
+* Modular and reusable architecture
+* Synchronous design based on system clock
+* Clean signal interface between modules
+
+---
+
+## 🧪 Verification
+
+* A dedicated **testbench** verifies:
+
+  * Normal operation sequence
+  * State transitions
+  * Timing correctness
+  * All intersection traffic scenarios
+* Simulation ensures proper coordination between the four traffic light modules
 
 ---
 
 ## 🎯 Purpose of This Mission
 
-* Practice hierarchical RTL design
-* Improve module reusability
-* Understand scalable hardware architecture
-* Prepare for full 4-way intersection implementation
+* Practice scalable hardware architecture
+* Understand multi-module instantiation
+* Verify complex traffic scenarios at system level
+* Strengthen RTL design and simulation skills
 
 ---
 
-This mission emphasizes designing a clean and expandable single traffic light module suitable for multi-instance system integration.
+This mission completes the expansion from a single traffic light controller to a fully structured 4-way intersection system using modular RTL design principles.
