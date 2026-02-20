@@ -1,60 +1,49 @@
-# 🚦 Basic 3 – 4-Way Intersection Traffic Light Controller
+# 🚦 Basic 4 – Moore FSM Traffic Light Controller
 
 ## 📌 Overview
 
-This project extends the single traffic light module into a complete 4-way intersection system.
+This project redesigns the traffic light controller using a **Moore FSM architecture**.
 
-The design is implemented by instantiating four identical traffic light modules and verifying all intersection cases through a comprehensive testbench.
+The goal of this mission is to diversify the design approach while maintaining a clean and scalable RTL structure.
 
 ---
 
 ## 🎯 Mission Objective
 
-* Expand the single traffic light module to a **4-way intersection**
-* Implement the system using **four module instantiations**
-* Develop a **testbench covering all intersection cases**
-* Prepare a clear verbal explanation of the design architecture and operation
+* Redesign the traffic light controller based on the **Moore FSM concept**
+* Separate state logic and output logic clearly
+* Strengthen understanding of FSM design methodologies
+* Maintain modular and hierarchical RTL structure
 
 ---
 
 ## 🏗 Design Rules
 
-* The intersection must be implemented by **instantiating four identical traffic light modules**
-* The **Top module must NOT include an additional control module**
-* A **single module must NOT directly control the entire intersection**
-* Each traffic light module must operate independently while supporting coordinated intersection behavior
+* The design must strictly follow the **Moore FSM architecture**
+
+  * Outputs depend only on the current state
+* No additional control logic is allowed in the **Top module**
+* The structure must remain scalable for intersection expansion
 
 ---
 
 ## 🛠 Design Concept
 
-* Hierarchical RTL design
-* FSM-based traffic light control
-* Modular and reusable architecture
-* Synchronous design based on system clock
-* Clean signal interface between modules
-
----
-
-## 🧪 Verification
-
-* A dedicated **testbench** verifies:
-
-  * Normal operation sequence
-  * State transitions
-  * Timing correctness
-  * All intersection traffic scenarios
-* Simulation ensures proper coordination between the four traffic light modules
+* State register (sequential logic)
+* Next-state logic (combinational logic)
+* Output logic determined only by the current state
+* Cycle-based timing control
+* Clean separation between control and output signals
 
 ---
 
 ## 🎯 Purpose of This Mission
 
-* Practice scalable hardware architecture
-* Understand multi-module instantiation
-* Verify complex traffic scenarios at system level
-* Strengthen RTL design and simulation skills
+* Compare Moore FSM with previous design approaches
+* Improve RTL structural clarity
+* Reinforce FSM-based hardware design concepts
+* Enhance modularity and maintainability
 
 ---
 
-This mission completes the expansion from a single traffic light controller to a fully structured 4-way intersection system using modular RTL design principles.
+This mission focuses on implementing a traffic light controller strictly following the Moore FSM design methodology while preserving a clean hierarchical RTL architecture.
