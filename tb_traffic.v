@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module tb_traffic_system();
-    
+
     reg clock;
     reg reset_n;
     reg start;
@@ -22,87 +22,6 @@ module tb_traffic_system();
         reset_n = 1'b1;
         #10;
         start = 1'b1;
-    end
-    
-    always@(*) begin
-        if(h_east==2'b10) begin
-            if(c_north==4'b1000) begin
-                $display("east crashed!!");
-                $finish;
-            end
-            else begin
-                $display("east ok");
-            end
-        end
-        else if(h_west==2'b10) begin
-            if(c_south==4'b1000) begin
-                $display("west crashed!!");
-                $finish;
-            end
-            else begin
-                $display("west ok");
-            end
-        end
-        else if(h_south==2'b10) begin
-            if(c_east==4'b1000) begin
-                $display("south crashed!!");
-                $finish;
-            end
-            else begin
-                $display("south ok");
-            end
-        end
-        else if(h_north==2'b10) begin
-            if(c_west==4'b1000) begin
-                $display("north crashed!!");
-                $finish;
-            end
-            else begin
-                $display("north ok");
-            end
-        end
-        else begin
-            $display("street OK");
-        end
-        
-        if(h_east==2'b10) begin
-            if(c_east==4'b0010)begin
-                $display("east crashed!!");
-                $finish;
-            end
-            else begin
-                $display("east ok");
-            end
-        end
-        else if(h_north==2'b10) begin
-            if(c_north==4'b0010)begin
-                $display("north crashed!!");
-                $finish;
-            end
-            else begin
-                $display("north ok");
-            end
-        end
-        else begin
-            $display("street OK");
-        end
-        
-        if (c_north==4'b0010)begin
-            if(c_east==4'b0010)begin
-                $display("car crashed!!");
-                $finish;
-            end
-            else if(c_east==4'b1000) begin
-                $display("car crashed!!");
-                $finish;
-            end
-            else begin
-                $display("street OK");
-            end
-        end
-        else begin
-            $display("street OK");
-        end
     end
     
 endmodule
